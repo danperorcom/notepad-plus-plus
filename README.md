@@ -1,4 +1,4 @@
-What is Notepad++ ?
+
 ===================
 
 [![GitHub release](https://img.shields.io/github/release/notepad-plus-plus/notepad-plus-plus.svg)](../../releases/latest)
@@ -8,6 +8,7 @@ What is Notepad++ ?
 Notepad++ is a free (free as in both "free speech" and "free beer") source code
 editor and Notepad replacement that supports several programming languages and
 natural languages. Running in the MS Windows environment, its use is governed by
+文件不存在了，失去焦点，提示保存，文件重新加载了，获得焦点，提示保存，这他妈不傻逼么，还不能配置。本repo删除了烦人的这种提示，在别处修改，在notepad++直接加载最新的内容，包括删除，不在提示让你保存。
 [GPL License](LICENSE).
 
 See the [Notepad++ official site](https://notepad-plus-plus.org/) for more information.
