@@ -5869,16 +5869,17 @@ void Notepad_plus::notifyBufferChanged(Buffer * buffer, int mask)
 					prepareBufferChangedDialog(buffer);
 
 					// Then we ask user to update
-					if (doReloadOrNot(buffer->getFullPathName(), buffer->isDirty()) != IDYES)
-					{
-						// Since the file content has changed but the user doesn't want to reload it, set state to dirty
-						buffer->setDirty(true);
+					//no deed askme
+					// if (doReloadOrNot(buffer->getFullPathName(), buffer->isDirty()) != IDYES)
+					// {
+					// 	// Since the file content has changed but the user doesn't want to reload it, set state to dirty
+					// 	buffer->setDirty(true);
 
-						// buffer in Notepad++ is not syncronized anymore with the file on disk
-						buffer->setUnsync(true);
+					// 	// buffer in Notepad++ is not syncronized anymore with the file on disk
+					// 	buffer->setUnsync(true);
 
-						break;	//abort
-					}
+					// 	break;	//abort
+					// }
 				}
 				// Set _isLoadedDirty false so when the document clean state is reached the icon will be set to blue
 				buffer->setLoadedDirty(false);
@@ -5922,7 +5923,8 @@ void Notepad_plus::notifyBufferChanged(Buffer * buffer, int mask)
 				scnN.nmhdr.idFrom = (uptr_t)buffer->getID();
 				_pluginsManager.notify(&scnN);
 
-				int doCloseDoc = doCloseOrNot(buffer->getFullPathName()) == IDNO;
+				// int doCloseDoc = doCloseOrNot(buffer->getFullPathName()) == IDNO;
+				int doCloseDoc = IDNO;
 				if (doCloseDoc)
 				{
 					//close in both views, doing current view last since that has to remain opened
